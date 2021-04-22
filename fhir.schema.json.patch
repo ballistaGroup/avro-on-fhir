@@ -1,0 +1,24 @@
+From 0d7c536fb5439f0cd0c47d37eb0902ac887301c8 Mon Sep 17 00:00:00 2001
+From: "Christopher J. McClellan" <cmcclellan@carrera.io>
+Date: Thu, 22 Apr 2021 15:35:45 -0400
+Subject: [PATCH] Add id field to fhir.schema.json
+
+---
+ fhir.schema.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/fhir.schema.json b/fhir.schema.json
+index ae3dd40..c407522 100755
+--- a/fhir.schema.json
++++ b/fhir.schema.json
+@@ -1,6 +1,7 @@
+ {
+   "$schema": "http://json-schema.org/draft-06/schema#",
+   "id": "http://hl7.org/fhir/json-schema/4.0",
++  "$id": "http://io.carrera.com/fhir/FhirResource",
+   "description": "see http://hl7.org/fhir/json.html#schema for information about the FHIR Json Schemas",
+   "discriminator": {
+     "propertyName": "resourceType",
+-- 
+2.31.1
+
