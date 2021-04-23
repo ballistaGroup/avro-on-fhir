@@ -1,6 +1,6 @@
 # avro-on-fhir
 
-AVRO models for the [4.0.1 version of FHIR][fhir-spec]
+AVRO models for the [4.0.1 version of FHIR][fhir-spec].  
 The AVRO schema is generated from the [FHIR JSON schema][fhir-json-schema].
 
 ## Developing
@@ -23,6 +23,8 @@ because the generator requires the root json schema to have an `$id`.
 
 Our [json-to-avro-schema][json-to-avro-schema] tool is used to generate the AVRO schema.
 You must set the `$J2A_INSTALL_DIR` environment variable before running the makefile.
+
+The generated schema is output to `src/main/avro/fhir.avsc` for the gradle avro plugin to pick up.
 
 At this time, the `gradle build` step will fail to generate the Java files.
 Once [json-to-avro-schema] is generating correct AVRO schemas, this will complete successfully and generate a jar.
