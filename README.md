@@ -18,6 +18,11 @@ This project really just glues together a few different code generators.
 
 ### Build
 
+```console
+export J2A_INSTALL_DIR=/path/to/json-to-avro-schema/directory
+make
+```
+
 The makefile downloads the schema from HL7 and applies a [small patch](./fhir.schema.json.patch) 
 because the generator requires the root json schema to have an `$id`.
 
