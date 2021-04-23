@@ -45,7 +45,7 @@ Once [json-to-avro-schema] is generating correct AVRO schemas, this will complet
 
 The majority of the development that needs to occur is in the [json-to-avro-schema][json-to-avro-schema] tool.  
 Once it is capable of correctly transpiling the JSON schema to AVRO schema, 
-we just need to publish the resulting `jar`.
+we just need to add a CI action to build and publish the resulting `jar` and `fhir.avsc` file.
 
 <!-- References -->
 [fhir-spec]: http://hl7.org/fhir/index.html
