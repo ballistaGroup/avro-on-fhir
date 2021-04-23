@@ -18,7 +18,7 @@ then
     exit 1
 else
     echo "transpiling..."
-    output=fhir.avsc
+    output=src/main/avro/fhir.avsc
     java -jar $J2A_INSTALL_DIR/json-to-avro-schema-assembly-0.1.jar $json_schema > $output
     echo "AVRO schema written to $output"
 fi
