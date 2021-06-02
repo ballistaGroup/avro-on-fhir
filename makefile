@@ -1,10 +1,13 @@
+GRADLE ?= ./gradlew
+JAVA ?= java
+
 all: build/libs/avro-on-fhir-1.0-SNAPSHOT.jar
 
 build/libs/avro-on-fhir-1.0-SNAPSHOT.jar: src/main/avro/fhir.avsc
-	gradle build
+	$(GRADLE) build
 
 src/main/avro/fhir.avsc: fhir.schema.json
-	java -jar ${J2A_INSTALL_DIR}/json-to-avro-schema-assembly-0.1.jar $< > $@
+	$(JAVA) -jar ${J2A_INSTALL_DIR}/json-to-avro-schema-assembly-0.1.jar $< > $@
 
 fhir.schema.json: fhir.schema.json.zip
 	unzip -o $<
@@ -15,7 +18,7 @@ fhir.schema.json.zip:
 
 .PHONY: mostlyclean
 mostlyclean:
-	gradle clean
+	$(GRADLE) clean
 	$(RM) src/main/avro/fhir.avsc
 	$(RM) fhir.schema.json
 
